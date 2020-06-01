@@ -84,7 +84,26 @@ public class Main {
     }
    
     public static void main(String[] args) {
-        System.out.println("test");
+
+        List<List<String>> equations = new ArrayList<>();
+
+        equations.add(Arrays.asList("a", "b"));
+        equations.add(Arrays.asList("b", "c"));
+
+        double[] values = new double[]{2.0, 3.0};
+
+        List<List<String>> queries = new ArrayList<>();
+
+        queries.add(Arrays.asList("a", "c"));
+        queries.add(Arrays.asList("b", "a"));
+        queries.add(Arrays.asList("a", "e"));
+        queries.add(Arrays.asList("a", "a"));
+        queries.add(Arrays.asList("x", "x"));
+
+        double[] answers = calcEquation(equations, values, queries);
+
+        System.out.println(Arrays.toString(answers));
+
     }
 
  
